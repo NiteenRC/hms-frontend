@@ -1,0 +1,56 @@
+<div class="product-conatiner">
+    <div class="title-header" *ngIf="updateForm?.id==null">
+        <h4 class="title">Add Item</h4>
+    </div>
+    <div class="title-header" *ngIf="updateForm?.id!=null">
+        <h4 class="title">Update Item</h4>
+    </div>
+    <hr>
+    <form [formGroup]="dataForm" (submit)="onSubmit()">
+        <div class="addproduct-container">
+            <mat-form-field class="forms-fildes">
+                <input matInput [matDatepicker]="picker1" formControlName="createdDate" placeholder="Applicable From">
+                <mat-datepicker-toggle matSuffix [for]="picker1" ng-model-options="{timezone: 'utc'}">
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+        <div class="addproduct-container">
+            <mat-form-field class="forms-fildes">
+                <input formControlName="code" matInput placeholder="Code">
+            </mat-form-field>
+            <br>
+        </div>
+
+        <div class="addproduct-container">
+            <mat-form-field class="forms-fildes">
+                <input formControlName="name" matInput placeholder="Name">
+            </mat-form-field>
+            <br>
+        </div>
+
+        <div class="addproduct-container">
+            <mat-form-field class="forms-fildes">
+                <mat-select [(value)]="selected_dropdown" (selectionChange)="changeDropdown($event.value)">
+                    <mat-option value="Active">Active</mat-option>
+                    <mat-option value="Inactive">Inactive</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="button-container">
+            <button type="button" (click)="closeModal()" aria-label="Close" class="btn btn-warning"
+                style="width: 25%;margin-left: 5px;">Cancel
+            </button>
+            <button [disabled]="!singleClickDisable && !dataForm.valid" class="btn btn-primary" type="submit"
+                style="width: 25%;margin-left: 5px;border-radius: 10px;">Save
+            </button>
+        </div>
+
+        <div class="button-container">
+            <h4 style="color: green;">{{successMsg}}</h4>
+            <h4 style="color: red;">{{errorMsg}}</h4>
+        </div>
+    </form>
+</div>
