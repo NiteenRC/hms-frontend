@@ -30,8 +30,10 @@ import { NavigationBarComponent } from './menu/navigation-bar/navigation-bar.com
 import { SubscriptionComponent } from './subscription/register/subscription.component';
 import { CreateTaxComponent } from './data/tax-code/create-tax/create-tax.component';
 import { TaxListComponent } from './data/tax-code/tax-list/tax-list.component';
-import { CreateItemComponent } from './data/item/create-item/create-item.component';
+import { CreateItemComponent } from './data/item/create-item/create-item.component'
+import { CreateDepartmentComponent } from './data/department/create-department/create-department.component';;
 import { ItemListComponent } from './data/item/item-list/item-list.component';
+import { DepartmentListComponent } from './data/department/department-list/department-list.component';
 import { CreateOrderTypeComponent } from './data/order-type/create-order-type/create-order-type.component';
 import { OrderTypeListComponent } from './data/order-type/order-type-list/order-type-list.component';
 import { CreateSessionComponent } from './data/session/create-session/create-session.component';
@@ -63,7 +65,9 @@ import { DesignationListComponent } from './data/designation/designation-list/de
     CreateTaxComponent,
     TaxListComponent,
     CreateItemComponent,
+		CreateDepartmentComponent,
     ItemListComponent,
+		DepartmentListComponent,
     CreateOrderTypeComponent,
     OrderTypeListComponent,
     CreateSessionComponent,

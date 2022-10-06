@@ -9,6 +9,7 @@ import { UpdateBankInfoComponent } from './setting/update-bank-info/update-bank-
 import { LoginComponent } from './setting/login/login.component';
 import { TaxListComponent } from './data/tax-code/tax-list/tax-list.component';
 import { ItemListComponent } from './data/item/item-list/item-list.component';
+import { DepartmentListComponent } from './data/department/department-list/department-list.component';
 import { OrderTypeListComponent } from './data/order-type/order-type-list/order-type-list.component';
 import { SessionListComponent } from './data/session/session-list/session-list.component';
 import { OutletListComponent } from './data/outlet/outlet-list/outlet-list.component';
@@ -32,6 +33,7 @@ export const routes: Routes = [
       { path: 'updateBankDetails', component: UpdateBankInfoComponent },
       { path: 'tax-list', component: TaxListComponent },
       { path: 'item-list', component: ItemListComponent },
+			{ path: 'department-list', component: DepartmentListComponent },
       { path: 'order-type-list', component: OrderTypeListComponent },
       { path: 'session-list', component: SessionListComponent },
       { path: 'outlet-list', component: OutletListComponent },

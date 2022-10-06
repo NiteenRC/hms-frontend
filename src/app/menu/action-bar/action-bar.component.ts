@@ -83,6 +83,9 @@ export class ActionBarComponent implements OnInit {
     if (item == "Designation") {
       this.router.navigate(['dashboard/designation-list']);
     }
+    if (item == "Department") {
+      this.router.navigate(['dashboard/department-list']);
+    }
   }
 
   getOrder(item) {
@@ -129,6 +132,8 @@ const TREE_DATA: MasterNode[] = [
         name: 'Property',
       }, {
         name: 'Designation',
+      }, {
+        name: 'Department',
       }
     ]
   },
