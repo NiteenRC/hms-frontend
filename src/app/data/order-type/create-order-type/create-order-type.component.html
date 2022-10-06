@@ -1,9 +1,9 @@
 <div class="product-conatiner">
     <div class="title-header" *ngIf="updateForm?.id==null">
-        <h4 class="title">Add Tax Code</h4>
+        <h4 class="title">Add Order type</h4>
     </div>
     <div class="title-header" *ngIf="updateForm?.id!=null">
-        <h4 class="title">Update Tax Code</h4>
+        <h4 class="title">Update Order type</h4>
     </div>
     <hr>
     <form [formGroup]="dataForm" (submit)="onSubmit()">

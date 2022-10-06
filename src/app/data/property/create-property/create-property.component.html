@@ -1,9 +1,9 @@
 <div class="product-conatiner">
     <div class="title-header" *ngIf="updateForm?.id==null">
-        <h4 class="title">Add Session</h4>
+        <h4 class="title">Add Item</h4>
     </div>
     <div class="title-header" *ngIf="updateForm?.id!=null">
-        <h4 class="title">Update Session</h4>
+        <h4 class="title">Update Item</h4>
     </div>
     <hr>
     <form [formGroup]="dataForm" (submit)="onSubmit()">

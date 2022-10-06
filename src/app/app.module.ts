@@ -42,6 +42,10 @@ import { CreateKitchenComponent } from './data/kitchen/create-kitchen/create-kit
 import { KitchenListComponent } from './data/kitchen/kitchen-list/kitchen-list.component';
 import { CreateMenuComponent } from './data/menu/create-menu/create-menu.component';
 import { MenuListComponent } from './data/menu/menu-list/menu-list.component';
+import { PropertyListComponent } from './data/property/property-list/property-list.component';
+import { CreatePropertyComponent } from './data/property/create-property/create-property.component';
+import { CreateDesignationComponent } from './data/designation/create-designation/create-designation.component';
+import { DesignationListComponent } from './data/designation/designation-list/designation-list.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +73,11 @@ import { MenuListComponent } from './data/menu/menu-list/menu-list.component';
     CreateKitchenComponent,
     KitchenListComponent,
     CreateMenuComponent,
-    MenuListComponent
+    MenuListComponent,
+    CreatePropertyComponent,
+    PropertyListComponent,
+    CreateDesignationComponent,
+    DesignationListComponent,
   ],
   imports: [
     TableModule,

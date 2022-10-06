@@ -14,6 +14,8 @@ import { SessionListComponent } from './data/session/session-list/session-list.c
 import { OutletListComponent } from './data/outlet/outlet-list/outlet-list.component';
 import { KitchenListComponent } from './data/kitchen/kitchen-list/kitchen-list.component';
 import { MenuListComponent } from './data/menu/menu-list/menu-list.component';
+import { PropertyListComponent } from './data/property/property-list/property-list.component';
+import { DesignationListComponent } from './data/designation/designation-list/designation-list.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -34,7 +36,9 @@ export const routes: Routes = [
       { path: 'session-list', component: SessionListComponent },
       { path: 'outlet-list', component: OutletListComponent },
       { path: 'kitchen-list', component: KitchenListComponent },
-      { path: 'menu-list', component: MenuListComponent }
+      { path: 'menu-list', component: MenuListComponent },
+      { path: 'property-list', component: PropertyListComponent },
+      { path: 'designation-list', component: DesignationListComponent },
     ]
   },
   { path: '**', redirectTo: '404', pathMatch: 'full' },

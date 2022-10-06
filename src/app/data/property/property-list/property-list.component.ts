@@ -2,20 +2,20 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { ItemService } from 'src/app/_services/item.service';
-import { CreateItemComponent } from '../create-item/create-item.component';
+import { PropertyService } from 'src/app/_services/property.service';
+import { CreatePropertyComponent } from '../create-property/create-property.component';
 
 @Component({
-    selector: 'app-item-list',
-    templateUrl: './item-list.component.html',
-    styleUrls: ['./item-list.component.css']
+    selector: 'app-property-list',
+    templateUrl: './property-list.component.html',
+    styleUrls: ['./property-list.component.css']
 })
-export class ItemListComponent implements OnInit {
+export class PropertyListComponent implements OnInit {
     displayedColumns: string[];
     dataSource;
     @ViewChild(MatPaginator) paginator: MatPaginator;
 
-    constructor(public dialog: MatDialog, private itemService: ItemService) {
+    constructor(public dialog: MatDialog, private propertyService: PropertyService) {
     }
 
     applyFilter(event: Event) {
@@ -33,7 +33,7 @@ export class ItemListComponent implements OnInit {
     }
 
     getList() {
-        this.itemService.getList().subscribe(res => {
+        this.propertyService.getList().subscribe(res => {
             this.dataSource = res;
             this.dataSource = new MatTableDataSource(res);
             this.dataSource.paginator = this.paginator;
@@ -41,7 +41,7 @@ export class ItemListComponent implements OnInit {
     }
 
     update(data): void {
-        const dialogRef = this.dialog.open(CreateItemComponent, {
+        const dialogRef = this.dialog.open(CreatePropertyComponent, {
             width: '550px',
             disableClose: true,
             data: { data: data }
@@ -53,7 +53,7 @@ export class ItemListComponent implements OnInit {
     }
 
     delete(productId) {
-        this.itemService.delete(productId).subscribe(() => {
+        this.propertyService.delete(productId).subscribe(() => {
             this.getList();
         });
     }

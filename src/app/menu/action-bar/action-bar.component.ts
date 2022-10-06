@@ -77,6 +77,12 @@ export class ActionBarComponent implements OnInit {
     if (item == "Menu") {
       this.router.navigate(['dashboard/menu-list']);
     }
+    if (item == "Property") {
+      this.router.navigate(['dashboard/property-list']);
+    }
+    if (item == "Designation") {
+      this.router.navigate(['dashboard/designation-list']);
+    }
   }
 
   getOrder(item) {
@@ -119,6 +125,10 @@ const TREE_DATA: MasterNode[] = [
         name: 'Kitchen',
       }, {
         name: 'Menu',
+      }, {
+        name: 'Property',
+      }, {
+        name: 'Designation',
       }
     ]
   },
